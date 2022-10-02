@@ -1,0 +1,12 @@
+---
+name: Test Kafka
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Execute shellscript
+        run: ./test_kafka.sh
